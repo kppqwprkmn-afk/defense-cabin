@@ -1,49 +1,28 @@
-答辩预演舱 · 参赛作品包
-========================================
+﻿绛旇京棰勬紨鑸?路 鍙傝禌浣滃搧鍖?========================================
 
-一、先看哪里
-1. README.md                 —— 10 分钟复现、架构、API、评审对标
-2. SUBMISSION.md             —— 赛规材料对照与提交前自检
-3. docs/technical-report.pdf —— 26 页技术文档（≤30 页）
-4. video/答辩预演舱-演示视频.mp4 —— 约 5 分 26 秒，1080p
-5. docs/prompts/             —— 5 个核心迭代的 Prompt 链
-6. screenshots/              —— 首页 / 预检 / 质询 / 报告 / 研发现场 / 移动端
-
-二、怎么跑
-需要 Node.js ≥ 20 与 pnpm ≥ 9。
-
+涓€銆佸厛鐪嬪摢閲?1. README.md                 鈥斺€?10 鍒嗛挓澶嶇幇銆佹灦鏋勩€丄PI銆佽瘎瀹″鏍?2. SUBMISSION.md             鈥斺€?璧涜鏉愭枡瀵圭収涓庢彁浜ゅ墠鑷
+3. docs/technical-report.pdf 鈥斺€?26 椤垫妧鏈枃妗ｏ紙鈮?0 椤碉級
+4. video/绛旇京棰勬紨鑸?婕旂ず瑙嗛.mp4 鈥斺€?绾?5 鍒?26 绉掞紝1080p
+5. docs/prompts/             鈥斺€?5 涓牳蹇冭凯浠ｇ殑 Prompt 閾?6. screenshots/              鈥斺€?棣栭〉 / 棰勬 / 璐ㄨ / 鎶ュ憡 / 鐮斿彂鐜板満 / 绉诲姩绔?
+浜屻€佹€庝箞璺?闇€瑕?Node.js 鈮?20 涓?pnpm 鈮?9銆?
   pnpm install
   pnpm build
   pnpm start
-  # 浏览器打开 http://127.0.0.1:8787
+  # 娴忚鍣ㄦ墦寮€ http://127.0.0.1:8787
 
-无需 API Key、无需数据库、无需 Python。
-默认 AI_MODE=mock（确定性离线引擎）；要接真实模型，复制 .env.example 为 .env，
-设置 AI_MODE=openai 与 OPENAI_API_KEY 即可。
-
-三、提交前必须由你补的 4 件事
-1. 把本目录推送到你的 GitHub / Gitee，仓库设为 Public，提交链接。
-2. 在报名系统填写姓名、学校、组别（研究生 / A / B / C）。
-   组别必须按学籍选择，选错会被无条件取消资格。
-3. 若有 AI 工具的原始对话导出（JSON/HTML/截图），放到 docs/prompts/raw/。
-   当前 docs/prompts 是结构化还原，保留了真实指令、报错与修复，但不是逐字导出。
-4. 视频旁白目前是 TTS。若赛规要求选手本人讲解，按 docs/demo-video-script.md
-   重录旁白并替换音轨（画面无需重录）。
-
-四、作品边界（答辩时主动说明）
-- 示例项目“智巡校园”为虚构材料，不涉及任何真实学校数据。
-- 评分是风险折算与演练参考，不构成奖项预测。
-- Mock 模式是确定性规则导演，不是“假数据占位”；真实 LLM 为可选增强。
-- 本作品从 0 编写，未直接包装任何开源项目；依赖均为公开基础库（MIT/Apache）。
-
-五、Git
-本目录保留完整 .git 历史（22 次提交）。查看：
+鏃犻渶 API Key銆佹棤闇€鏁版嵁搴撱€佹棤闇€ Python銆?榛樿 AI_MODE=mock锛堢‘瀹氭€х绾垮紩鎿庯級锛涜鎺ョ湡瀹炴ā鍨嬶紝澶嶅埗 .env.example 涓?.env锛?璁剧疆 AI_MODE=openai 涓?OPENAI_API_KEY 鍗冲彲銆?
+涓夈€佹彁浜ゅ墠蹇呴』鐢变綘琛ョ殑 4 浠朵簨
+1. 鎶婃湰鐩綍鎺ㄩ€佸埌浣犵殑 GitHub / Gitee锛屼粨搴撹涓?Public锛屾彁浜ら摼鎺ャ€?2. 鍦ㄦ姤鍚嶇郴缁熷～鍐欏鍚嶃€佸鏍°€佺粍鍒紙鐮旂┒鐢?/ A / B / C锛夈€?   缁勫埆蹇呴』鎸夊绫嶉€夋嫨锛岄€夐敊浼氳鏃犳潯浠跺彇娑堣祫鏍笺€?3. 鑻ユ湁 AI 宸ュ叿鐨勫師濮嬪璇濆鍑猴紙JSON/HTML/鎴浘锛夛紝鏀惧埌 docs/prompts/raw/銆?   褰撳墠 docs/prompts 鏄粨鏋勫寲杩樺師锛屼繚鐣欎簡鐪熷疄鎸囦护銆佹姤閿欎笌淇锛屼絾涓嶆槸閫愬瓧瀵煎嚭銆?4. 瑙嗛鏃佺櫧鐩墠鏄?TTS銆傝嫢璧涜瑕佹眰閫夋墜鏈汉璁茶В锛屾寜 docs/demo-video-script.md
+   閲嶅綍鏃佺櫧骞舵浛鎹㈤煶杞紙鐢婚潰鏃犻渶閲嶅綍锛夈€?
+鍥涖€佷綔鍝佽竟鐣岋紙绛旇京鏃朵富鍔ㄨ鏄庯級
+- 绀轰緥椤圭洰鈥滄櫤宸℃牎鍥€濅负铏氭瀯鏉愭枡锛屼笉娑夊強浠讳綍鐪熷疄瀛︽牎鏁版嵁銆?- 璇勫垎鏄闄╂姌绠椾笌婕旂粌鍙傝€冿紝涓嶆瀯鎴愬椤归娴嬨€?- Mock 妯″紡鏄‘瀹氭€ц鍒欏婕旓紝涓嶆槸鈥滃亣鏁版嵁鍗犱綅鈥濓紱鐪熷疄 LLM 涓哄彲閫夊寮恒€?- 鏈綔鍝佷粠 0 缂栧啓锛屾湭鐩存帴鍖呰浠讳綍寮€婧愰」鐩紱渚濊禆鍧囦负鍏紑鍩虹搴擄紙MIT/Apache锛夈€?
+浜斻€丟it
+鏈洰褰曚繚鐣欏畬鏁?.git 鍘嗗彶锛?2 娆℃彁浜わ級銆傛煡鐪嬶細
 
   git log --oneline --reverse
 
-六、如果安装遇到问题
-- esbuild 构建脚本被拦截：pnpm approve-builds 勾选 esbuild，或 pnpm rebuild esbuild
-- Windows 依赖链接异常：本项目已设置 nodeLinker: hoisted；删除 node_modules 后重装
-- 端口占用：PORT=8899 pnpm start
+鍏€佸鏋滃畨瑁呴亣鍒伴棶棰?- esbuild 鏋勫缓鑴氭湰琚嫤鎴細pnpm approve-builds 鍕鹃€?esbuild锛屾垨 pnpm rebuild esbuild
+- Windows 渚濊禆閾炬帴寮傚父锛氭湰椤圭洰宸茶缃?nodeLinker: hoisted锛涘垹闄?node_modules 鍚庨噸瑁?- 绔彛鍗犵敤锛歅ORT=8899 pnpm start
 
-生成时间：2026-11-02
+鐢熸垚鏃堕棿锛?026-11-02
+
