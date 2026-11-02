@@ -35,7 +35,7 @@ const projectSchema = z.object({
 const sessionSchema = z.object({
   projectId: z.string().min(1),
   intensity: z.enum(['标准', '高压']).default('标准'),
-  speed: z.number().min(0.6).max(4).optional(),
+  speed: z.number().min(0.2).max(4).optional(),
 });
 
 async function extractFile(file: Express.Multer.File): Promise<string> {

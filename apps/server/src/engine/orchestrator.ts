@@ -91,7 +91,7 @@ async function run(sessionId: string) {
 
   const planned = buildScript(project, session.intensity);
   const index = new BM25Index(project.chunks);
-  const speed = Math.max(0.6, Math.min(4, session.speed || 1));
+  const speed = Math.max(0.2, Math.min(4, session.speed || 1));
   let report: ReturnType<typeof buildReport> | undefined;
   let n = 0;
 
