@@ -7,7 +7,7 @@
 
 ## 视频与 Git
 
-成片约 28MB，已随仓库提交（低于 GitHub 100MB 单文件限制），评委可直接在仓库内观看。  
+成片约 15.4MB，已随仓库提交（低于 GitHub 25MB 在线预览限制），评委可直接在仓库内观看。
 `video/raw/`、`video/parts/`、`video/audio/` 为录屏中间产物，已 gitignore。
 
 ## 重新生成
