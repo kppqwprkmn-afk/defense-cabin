@@ -5,10 +5,10 @@
 - 内容：产品真实操作录屏 + 中文旁白 + 2 分钟 AI 协同过程复现
 - 旁白：Edge TTS `zh-CN-YunxiNeural`；逐字稿见 `docs/demo-video-script.md`
 
-## 为什么视频不放进 Git
+## 视频与 Git
 
-成片约 100–200MB，超过普通仓库的舒适体积。  
-提交时请把 MP4 上传到赛事系统，或使用 Git LFS；仓库内保留脚本与逐字稿，保证可重新生成。
+成片约 28MB，已随仓库提交（低于 GitHub 100MB 单文件限制），评委可直接在仓库内观看。  
+`video/raw/`、`video/parts/`、`video/audio/` 为录屏中间产物，已 gitignore。
 
 ## 重新生成
 
