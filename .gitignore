@@ -9,7 +9,6 @@ apps/server/data-e2e/
 *.err
 .DS_Store
 video/*.webm
-video/*.mp4
 video/raw/
 video/parts/
 video/test/
