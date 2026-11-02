@@ -8,7 +8,7 @@
 | 赛规要求 | 本包对应文件 | 状态 |
 | --- | --- | --- |
 | 代码仓库（GitHub/Gitee，Public） | 当前目录，已初始化 Git（16+ 次提交） | ⚠️ 需推送到你的账号并设为 Public |
-| 完整细粒度 Git 提交历史 | `git log --oneline --reverse` | ✅ 16 次模块级提交 |
+| 完整细粒度 Git 提交历史 | `git log --oneline --reverse` | ✅ 22 次模块级提交 |
 | AI 对话历史 / Prompt 快照（≥3 个核心迭代） | `docs/prompts/01-scope.md` ~ `05-build.md`（5 个） | ✅ 结构化还原；⚠️ 建议附工具原始截图 |
 | README 10 分钟复现指南 | `README.md` 第 3 节 | ✅ |
 | 环境配置 / 依赖清单 / 环境变量模板 | `.env.example`、`pnpm-lock.yaml`、`package.json` | ✅ |
