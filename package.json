@@ -1,0 +1,21 @@
+{
+  "name": "defense-cabin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "答辩预演舱 — 多 Agent 交叉质询系统",
+  "type": "module",
+  "packageManager": "pnpm@11.28.5",
+  "scripts": {
+    "dev": "concurrently -n server,web -c yellow,cyan \"pnpm --filter @cabin/server dev\" \"pnpm --filter @cabin/web dev\"",
+    "build": "pnpm --filter @cabin/web build && pnpm --filter @cabin/server build",
+    "start": "node apps/server/dist/index.js",
+    "preview": "pnpm build && pnpm start",
+    "test": "pnpm --filter @cabin/server test",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "concurrently": "^9.1.2",
+    "playwright-core": "^1.49.1"
+  }
+}
