@@ -10,5 +10,8 @@ apps/server/data/uploads/
 video/*.webm
 video/*.mp4
 video/raw/
+video/parts/
+video/test/
 video/audio/
+video/frame-*.jpg
 .dsh/
