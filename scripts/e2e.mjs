@@ -7,7 +7,12 @@ const BASE = `http://127.0.0.1:${PORT}`;
 const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
 const server = spawn(process.execPath, ['apps/server/dist/index.js'], {
-  env: { ...process.env, PORT: String(PORT), AI_MODE: 'mock' },
+  env: {
+    ...process.env,
+    PORT: String(PORT),
+    AI_MODE: 'mock',
+    DATA_DIR: 'apps/server/data-e2e',
+  },
   stdio: 'ignore',
   windowsHide: true,
 });
