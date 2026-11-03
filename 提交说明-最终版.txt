@@ -6,7 +6,7 @@ https://github.com/kppqwprkmn-afk/defense-cabin
 
 仓库已设为 Public，包含：
 - 全部源代码
-- 28 次 Git 提交
+- 二十余次 Git 提交
 - 5 个 Prompt 演进记录（docs/prompts）
 - README 10 分钟复现指南
 - 26 页技术文档 PDF
