@@ -23,6 +23,9 @@
 - [raw/01-scope.md](raw/01-scope.md)：选题与范围
 - [raw/02-build.md](raw/02-build.md)：解析与评分
 - [raw/03-bugfix.md](raw/03-bugfix.md)：真实 Bug 与修复
+- [raw/04-复核-材料解析.md](raw/04-复核-材料解析.md)：2026-11-14 补充复核
+- [raw/05-复核-SSE.md](raw/05-复核-SSE.md)：2026-11-14 补充复核
+- [raw/06-复核-评分.md](raw/06-复核-评分.md)：2026-11-14 补充复核
 
 ## 如何验证
 
