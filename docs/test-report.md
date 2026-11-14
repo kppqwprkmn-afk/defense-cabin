@@ -92,7 +92,7 @@ curl http://127.0.0.1:8787/api/health
 
 | 产物 | 校验 |
 | --- | --- |
-| `video/答辩预演舱-演示视频.mp4` | 1920×1080 / 30fps / H.264 + AAC / 5:16 |
+| `video/答辩预演舱-演示视频.mp4` | 1920×1080 / 30fps / H.264 + AAC / 5:26 |
 | `docs/technical-report.pdf` | 26 页 / 3.4MB / A4 |
 | `screenshots/` | 7 张，1440×900 @2x |
 
