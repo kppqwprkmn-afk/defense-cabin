@@ -12,7 +12,7 @@
 | AI 对话历史 / Prompt 快照（≥3 个核心迭代） | `docs/prompts/01-scope.md` ~ `05-build.md`（5 个） | ✅ 结构化还原；⚠️ 建议附工具原始截图 |
 | README 10 分钟复现指南 | `README.md` 第 3 节 | ✅ |
 | 环境配置 / 依赖清单 / 环境变量模板 | `.env.example`、`pnpm-lock.yaml`、`package.json` | ✅ |
-| 演示视频（5–8 分钟，MP4 1080p） | `video/答辩预演舱-演示视频.mp4` | ✅ 约 5 分 22 秒 |
+| 演示视频（5–8 分钟，MP4 1080p） | `video/答辩预演舱-演示视频.mp4` | ✅ 约 5 分 16 秒 |
 | 视频含 ≥2 分钟 AI 协同过程复现 | 03:10–05:13 `/making-of` + Prompt 链 | ✅ |
 | 技术文档 PDF（≤30 页） | `docs/technical-report.pdf` | ✅ 26 页 / 3.4MB |
 | 原创性 / 非开源包装 | 从 0 编写；依赖均为公开基础库 | ✅ |
