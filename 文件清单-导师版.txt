@@ -1,0 +1,342 @@
+答辩预演舱 · 文件清单（导师版）
+================================================
+
+说明：
+- 每个文件名后面直接标注“这是什么、用来干什么、是否建议老师看”。
+- 标 [必看] 的，是 20 分钟内了解作品所需的材料。
+- 标 [选看] 的，是技术细节、过程证据或运行文件。
+- 标 [源码] 的，是程序实现，供老师抽查。
+- 本清单只列最终文件夹内的文件；根目录外的两个 zip 在最后单列。
+
+一、入口与总览（根目录）
+------------------------------------------------
+
+00-导师审阅说明.txt
+  导师入口。作品一句话、20 分钟审阅顺序、学生与 AI 的分工、需要老师把关的 4 个问题、已知局限。[必看]
+
+README.md
+  项目总览。包含 10 分钟复现、目录结构、API、评分口径、测试命令。[必看]
+
+提交说明-最终版.txt
+  对外提交材料对照。网盘、作品介绍文档、演示视频、技术文档分别用哪个文件。[选看]
+
+文件清单-导师版.txt
+  本文件。所有文件的作用注释。[工具]
+
+SUBMISSION.md
+  赛事评分项与仓库内容的对照表。把“过程可复现、场景、AI 使用、实用价值”逐项对应到文件。[选看]
+
+LICENSE
+  MIT 许可证。说明代码可公开阅读、复现和引用。[选看]
+
+启动.bat
+  Windows 一键启动入口。调用 portable\start.bat，浏览器打开 8799。[运行]
+
+提交历史.txt
+  Git 提交历史的纯文本版。断网或不想打开 GitHub 时，可直接看 35 次提交记录。[选看]
+
+.env.example
+  可选真实 LLM 的环境变量示例。默认 mock 模式不需要填写。[选看]
+
+.gitignore
+  Git 忽略规则。排除 node_modules、构建产物、本地数据、便携版和提交材料。[工具]
+
+.npmrc
+  pnpm 安装参数。Windows 下使用 hoisted 依赖布局，避免 junction 问题。[工具]
+
+package.json
+  根工作区脚本。pnpm dev / build / start / test / e2e 的入口。[源码]
+
+pnpm-lock.yaml
+  依赖锁定文件。保证老师安装到同一组版本。[工具]
+
+pnpm-workspace.yaml
+  monorepo 工作区声明。apps/web、apps/server、packages/shared 三个包。[工具]
+
+tsconfig.base.json
+  TypeScript 基础配置。前后端共享严格模式与路径别名。[工具]
+
+.git\
+  完整 Git 仓库。35 次提交，作者均为学生本人账号；每个功能可回溯到对应 diff。[必看-过程证据]
+
+二、文档（docs\）
+------------------------------------------------
+
+docs\作品介绍文档.pdf
+  7 页作品介绍。严格按赛事第 6 项要求写：项目详情、使用方式、亮点、AI 测试技术落地、关键技术、图片、是否发表/获奖、是否基于其他项目优化。[必看]
+
+docs\technical-report.pdf
+  26 页技术文档。架构、论点抽取、BM25、SSE、评分模型、测试、局限与复现。[必看]
+
+docs\technical-report.html
+  技术文档的 HTML 源文件。改文字/重新导出 PDF 时使用。[选看]
+
+docs\architecture.md
+  架构说明。前端、接口、应用层、领域层、数据层的职责边界。[选看]
+
+docs\competition-mapping.md
+  评分映射。赛规每一项对应到仓库里的证据文件。[选看]
+
+docs\demo-video-script.md
+  最终版演示视频旁白稿。含时间码、白话表述、录制建议。[选看]
+
+docs\test-report.md
+  测试记录。7 个单测、Playwright 端到端、真实 Bug 与修复、评分校准前后对比。[必看-过程证据]
+
+docs\prompts\README.md
+  Prompt 演进总览。说明 5 个阶段各自解决什么问题。[必看-过程证据]
+
+docs\prompts\01-scope.md
+  第 1 阶段 Prompt：把“通用 Agent 平台”收窄成“答辩预演”单一场景。[选看]
+
+docs\prompts\02-material-parser.md
+  第 2 阶段 Prompt：材料解析与论点抽取；记录年份被正则吃掉、创新句被挤出前 12 的问题。[选看]
+
+docs\prompts\03-orchestrator.md
+  第 3 阶段 Prompt：剧本、SSE、会话页；记录丢消息、刷新重复 Turn 的修复。[选看]
+
+docs\prompts\04-scoring.md
+  第 4 阶段 Prompt：五维评分、风险与修改清单；记录证据强度 42 分、重复风险的校准。[选看]
+
+docs\prompts\05-build.md
+  第 5 阶段 Prompt：Windows 构建、pnpm junction、esbuild 双版本、.bin 失效的修复。[选看]
+
+三、演示视频（video\）
+------------------------------------------------
+
+video\答辩预演舱-演示视频.mp4
+  最终成片。5 分 16 秒，1920×1080，30fps，真人配音，烧录字幕，21.3MB。[必看]
+
+video\README.md
+  视频说明。规格、旁白来源、字幕、Git 中的位置。[选看]
+
+四、界面截图（screenshots\）
+------------------------------------------------
+
+screenshots\01-dashboard.png
+  首页。评审席、最近演练、新建/载入入口。[必看]
+
+screenshots\02-preflight.png
+  材料预检。材料体检、论点清单、证据强度与缺口。[必看]
+
+screenshots\03-live.png
+  质询现场。逐字追问、材料原文、风险实时累计。[必看]
+
+screenshots\05-verdict.png
+  质询收束。评分环、风险信号、进入报告。[选看]
+
+screenshots\06-report.png
+  演练报告。五维雷达、风险清单、修改清单。[必看]
+
+screenshots\09-making-of.png
+  研发现场。5 次迭代、Prompt、Bug 与 diff 回放。[必看-过程证据]
+
+screenshots\11-mobile.png
+  移动端 390px 适配。证明不是只做桌面。[选看]
+
+五、示例材料（samples\）
+------------------------------------------------
+
+samples\智巡校园-实验室安全巡检智能体.md
+  虚构示例申报书。用于演示“上传材料 → 体检 → 质询 → 报告”的完整流程；不涉及真实学校数据。[选看]
+
+六、源码（apps\ 与 packages\）
+------------------------------------------------
+
+apps\server\src\index.ts
+  后端入口。启动 Express、加载配置、挂路由、托管前端构建产物。[源码]
+
+apps\server\src\routes.ts
+  API 路由。项目创建、上传、预检、开始质询、SSE、报告、Markdown 导出。[源码]
+
+apps\server\src\store.ts
+  JSON 数据访问层。projects / sessions / turns / risks / revisions 的读写与原子落盘。[源码]
+
+apps\server\src\report.ts
+  报告生成。把会话、风险、修订整理成前端报告和 Markdown。[源码]
+
+apps\server\src\config.ts
+  运行配置。端口、AI_MODE（mock/real）、数据目录、上传限制。[源码]
+
+apps\server\src\domain\analyze.ts
+  材料解析核心。章节切分、句子清洗、论点抽取、证据强度、七类缺口。[源码]
+
+apps\server\src\domain\analyze.test.ts
+  材料解析单测。年份保留、创新句入榜、承诺句兜底、边界情况。[源码]
+
+apps\server\src\domain\text.ts
+  中文文本工具。unigram + bigram 分词、标点清洗、句子切分。[源码]
+
+apps\server\src\domain\sample.ts
+  示例项目数据。首页“载入示例”使用的虚构材料与预置结果。[源码]
+
+apps\server\src\engine\script.ts
+  确定性剧本引擎。标准 27 轮 / 高压 31 轮的评审台词与追问链。[源码]
+
+apps\server\src\engine\orchestrator.ts
+  质询编排。开始、推进、落库、SSE 广播、断线重放。[源码]
+
+apps\server\src\engine\scoring.ts
+  评分模型。七类缺口映射五维、单维封顶、风险去重、P0/P1/P2 修改项。[源码]
+
+apps\server\src\engine\scoring.test.ts
+  评分单测。分数边界、风险去重、修改项排序。[源码]
+
+apps\server\src\engine\llm.ts
+  LLM 适配层。mock 模式走本地剧本；真实 API 失败自动回退。[源码]
+
+apps\web\src\main.tsx
+  前端入口。挂载 React、路由、全局样式。[源码]
+
+apps\web\src\App.tsx
+  路由表。首页、会话页、报告页、研发现场。[源码]
+
+apps\web\src\api.ts
+  前端 API 封装。fetch、EventSource、错误处理。[源码]
+
+apps\web\src\pages\Dashboard.tsx
+  首页。评审席、最近演练、新建/载入示例。[源码]
+
+apps\web\src\pages\SessionRoom.tsx
+  质询现场。左栏论点、中栏对话、右栏风险与进度。[源码]
+
+apps\web\src\pages\ReportPage.tsx
+  报告页。五维雷达、风险清单、修改清单、质询实录。[源码]
+
+apps\web\src\pages\MakingOf.tsx
+  研发现场。五次迭代、Prompt、Bug 与 diff 回放。[源码]
+
+apps\web\src\components\Shell.tsx
+  全局外壳。侧栏、顶部状态、页面容器。[源码]
+
+apps\web\src\components\NewProjectModal.tsx
+  新建演练弹窗。项目名、材料上传、模式选择、校验。[源码]
+
+apps\web\src\components\Radar.tsx
+  五维雷达 SVG。维度、分数、标签、响应式。[源码]
+
+apps\web\src\components\ScoreRing.tsx
+  评分环。总分与等级色。[源码]
+
+apps\web\src\components\Avatar.tsx
+  评审/答辩人头像。姓名、角色、状态。[源码]
+
+apps\web\src\data\makingOf.ts
+  研发现场数据。五次迭代、Prompt 摘要、Bug 记录。[源码]
+
+apps\web\src\styles.css
+  全局设计系统。深色底、琥珀强调色、响应式断点。[源码]
+
+apps\web\vite.config.ts
+  Vite 配置。开发代理、构建输出、路径别名。[源码]
+
+packages\shared\src\index.ts
+  前后端共享类型。Project、Session、Turn、Claim、Risk、Report 等。[源码]
+
+packages\shared\package.json
+  共享包声明。类型入口与构建脚本。[源码]
+
+七、辅助脚本（scripts\）
+------------------------------------------------
+
+scripts\e2e.mjs
+  端到端测试。Playwright 走首页 → 预检 → 27 轮 → 报告，校验数据与 console error。[选看]
+
+scripts\build-report.mjs
+  技术文档 HTML 生成器。把截图、架构图、测试结果排成 26 页。[选看]
+
+scripts\pdf.mjs
+  技术文档 PDF 导出。Playwright/Chrome 打印为 A4。[选看]
+
+scripts\record-scenes.mjs
+  录屏脚本。逐场景录制产品操作，供演示视频剪辑。[选看]
+
+scripts\record-live.mjs
+  录屏脚本。单独录制质询现场的长镜头。[选看]
+
+scripts\mux-scenes.mjs
+  视频合成脚本。把场景片段、旁白、字幕合成成片。[选看]
+
+scripts\final-shots.mjs
+  最终截图脚本。生成 screenshots 下的 7 张界面图。[选看]
+
+scripts\live-shots.mjs
+  质询现场截图脚本。录制/截取关键对话状态。[选看]
+
+scripts\shot.mjs
+  通用截图脚本。按 URL 和选择器截单页。[选看]
+
+scripts\tts.py
+  旧版 Edge TTS 旁白脚本。当前成片已换真人配音，仅保留作过程记录。[选看]
+
+八、免安装版（portable\）
+------------------------------------------------
+
+portable\start.bat
+  免安装启动入口。设置端口 8799、AI_MODE=mock，启动内置 Node 与后端。[运行]
+
+portable\启动说明.txt
+  给非技术用户看的启动说明。双击、端口、关闭方式。[选看]
+
+portable\runtime\node.exe
+  内置 Node 运行时。避免电脑没装 Node 时无法运行。[运行]
+
+portable\node_modules\
+  生产依赖。Express、PDF/DOCX 解析等，已随包携带。[运行]
+
+portable\apps\server\dist\index.js
+  后端构建产物。免安装版直接运行这个文件。[运行]
+
+portable\apps\server\data\
+  便携版运行数据。演练记录与会话落盘位置。[运行]
+
+portable\apps\web\dist\index.html
+  前端构建产物入口。后端托管这个页面。[运行]
+
+portable\apps\web\dist\assets\
+  前端 JS/CSS 资源。构建后的静态文件。[运行]
+
+九、对外提交材料（提交材料\）
+------------------------------------------------
+
+提交材料\01-演示视频.mp4
+  对外上传的成片。5 分 16 秒，真人配音，烧录字幕，21.3MB。[必看]
+
+提交材料\02-技术文档.pdf
+  对外上传的 26 页技术文档。[必看]
+
+提交材料\03-演示截图\
+  对外上传的 7 张界面截图，与 screenshots 内容一致。[选看]
+
+提交材料\04-Git提交历史.txt
+  对外上传的 Git 历史纯文本。证明 35 次提交与演进过程。[选看]
+
+提交材料\05-作品介绍文档.pdf
+  对外上传的第 6 项文档。7 页，严格按 7 条要求写。[必看]
+
+十、根目录外的两个压缩包
+------------------------------------------------
+
+D:\DeepSeek H\答辩预演舱-最终提交.zip
+  代码/文档包。源码、README、技术文档、作品介绍、演示视频、截图；不含 .git、portable、提交材料。约 41MB。[对外提交]
+
+D:\DeepSeek H\答辩预演舱-便携版.zip
+  免安装包。Windows 64 位解压后双击 portable\start.bat；约 45MB。[对外提交/老师试用]
+
+D:\DeepSeek H\网盘上传\
+  网盘上传专用文件夹。已放好上面两个 zip，直接整个文件夹上传网盘即可。[工具]
+
+十一、最短审阅路径
+------------------------------------------------
+
+如果老师只有 10 分钟：
+1. 本文件（2 分钟）
+2. docs\作品介绍文档.pdf（3 分钟）
+3. video\答辩预演舱-演示视频.mp4 开头 2 分钟（2 分钟）
+4. 双击 启动.bat，点“载入示例”，看首页和报告（3 分钟）
+
+如果老师要看技术细节：
+1. docs\technical-report.pdf
+2. docs\test-report.md
+3. docs\prompts\README.md
+4. GitHub 提交历史
