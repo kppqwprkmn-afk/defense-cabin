@@ -15,7 +15,7 @@ https://github.com/kppqwprkmn-afk/defense-cabin
 
 仓库为 Public，包含：
 - 全部源代码（React + Express + TypeScript）
-- 35 次 Git 提交，作者均为学生本人账号
+- 30 余次 Git 提交，作者均为学生本人账号
 - 5 个阶段的 Prompt 演进记录（docs\prompts）
 - README 10 分钟复现指南
 - 26 页技术文档（docs\technical-report.pdf）
